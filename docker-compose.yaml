@@ -5,7 +5,7 @@ services:
     restart: "unless-stopped"
     shm_size: "2gb"
     ports:
-      - "8081:8081"
+      - "8080:8080"
       - "52000-52100:52000-52100/udp"
     environment:
       NEKO_SCREEN: 1920x1080@30
