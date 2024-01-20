@@ -1,11 +1,11 @@
 version: "3.4"
 services:
   neko:
-    image: "m1k1o/neko:firefox"
+    image: "manlineroot12/virtualbrowser/v2"
     restart: "unless-stopped"
     shm_size: "2gb"
     ports:
-      - "8080:8080"
+      - "8081:8081"
       - "52000-52100:52000-52100/udp"
     environment:
       NEKO_SCREEN: 1920x1080@30
@@ -13,3 +13,5 @@ services:
       NEKO_PASSWORD_ADMIN: admin
       NEKO_EPR: 52000-52100
       NEKO_ICELITE: 1
+    cap_add:
+      - SYS_ADMIN
